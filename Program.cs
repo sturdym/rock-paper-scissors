@@ -27,7 +27,14 @@ namespace rock_paper_scissors
         {
             Console.WriteLine("Please type your selection ('Rock' or 'Paper' or 'Scissors'):");
             userSelection = Console.ReadLine();
+            while (userSelection != "Rock" && userSelection != "Paper" && userSelection != "Scissors")
+            {
+                Console.WriteLine("Invalid value. Please type ('Rock' or 'Paper' or 'Scissors'):");
+                userSelection = Console.ReadLine();
+            }
+
             return userSelection;
+            
         }
 
         //The computer returns its selection of either Rock or Paper or Scissors
